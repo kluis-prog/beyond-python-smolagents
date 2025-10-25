@@ -1,0 +1,24 @@
+graph TD
+    subgraph Phase 1: Vendor Accreditation & Approval
+        A[Start Vendor Accreditation & Approval] --> B{1. Requirements Definition (7.1.1)};
+        B --> C[Technical Team & End-Users Define Material Specifications, Standards, Regulatory Requirements];
+        C --> D{2. Document Submission (7.1.2)};
+        D --> E[Vendor Submits: Business License, Permits, Company Profile, Product List, Specs, COAs, CPRs, SDS/MSDS, Certifications (GMP/ISO/HACCP), Dealer/Distributor Authorizations, Specific Certs for Biologicals];
+        E --> F{3. Vendor Identification & Evaluation (7.1.3)};
+        F --> G[Procurement Identifies Min. 3 Vendors (1 Main + 2 Alternates)];
+        G --> H[End-Users & QS Conduct Sample Evaluation, Lab Testing, Trials];
+        H --> I[Risk-Based Classification: High, Medium, Low];
+        I --> J{4. Vendor Selection Review Meeting (7.1.4)};
+        J --> K[Procurement, Technical Team, End-Users Review Documents & Initial Risk];
+
+        K -- "Documents Not Meet Minimum" --> L[End: Vendor Notified & Excluded];
+        K -- "Documents Meet Minimum" --> M{Is Vendor High-Risk?};
+
+        M -- "Yes" --> N[High-Risk Vendors Undergo Onsite/Remote Audit by Procurement, QS, End-User];
+        N --> P[Bidding Committee (Procurement, QA, Finance, Accounting, End-User) Votes (3/5 required)];
+        M -- "No" --> P;
+
+        P --> Q[5. Audits and Approval];
+        Q --> R[Approved Vendors Listed in AVL; Contracts Filed Centrally];
+        R --> S[End Vendor Accreditation & Approval];
+    end
